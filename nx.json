@@ -19,7 +19,20 @@
             "tags": ["fd"]
         },
         "platform": {
-            "tags": ["fdp"]
+      "tags": [
+        "fdp"
+      ]
+    },
+    "app-shell": {
+      "tags": [
+        "app"
+      ],
+      "implicitDependencies": [
+        "core"
+      ]
+    },
+    "app-shell-app": {
+      "tags": []
         }
     }
 }

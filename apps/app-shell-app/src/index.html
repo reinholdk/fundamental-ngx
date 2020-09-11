@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>AppShellApp</title>
+    <base href="/"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<aba-ngx-root></aba-ngx-root>
+
+
+
+<script type="text/javascript">
+    window.onload = function(e){
+        console.log('w = ', window.appShellProviderService)
+
+        window.appShellProviderService.zone.run(() => {
+            window.appShellProviderService.ref.themeManager.onChange((aaa) => {
+                console.log('JS: ', aaa)
+            });
+        });
+    }
+
+</script>
+
+</body>
+</html>
