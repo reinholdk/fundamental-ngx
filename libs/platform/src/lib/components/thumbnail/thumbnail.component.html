@@ -1,0 +1,25 @@
+<div [ngClass]="isHorizontal ? 'fdp-thumbnail-container--horizontal' : 'fdp-thumbnail-container'">
+    <fdp-thumbnail-image
+        *ngIf="!isHorizontal"
+        [mediaList]="mediaList"
+        [isHorizontal]="isHorizontal"
+        (thumbNailClicked)="thumbNailClickHandle($event)"
+    ></fdp-thumbnail-image>
+    <div class="fdp-media-container" [ngClass]="{ 'fdp-media-container--horizontal': 'isHorizontal' }">
+        <img
+            *ngIf="selectedMedia.mediaType === 'image'"
+            [attr.src]="selectedMedia.mediaUrl"
+            [attr.alt]="selectedMedia.alt"
+            [attr.title]="selectedMedia.label"
+        />
+        <video *ngIf="selectedMedia.mediaType === 'video'" [src]="selectedMedia.mediaUrl" controls>
+            {{ selectedMedia.alt }}
+        </video>
+    </div>
+    <fdp-thumbnail-image
+        *ngIf="isHorizontal"
+        [mediaList]="mediaList"
+        [isHorizontal]="isHorizontal"
+        (thumbNailClicked)="thumbNailClickHandle($event)"
+    ></fdp-thumbnail-image>
+</div>

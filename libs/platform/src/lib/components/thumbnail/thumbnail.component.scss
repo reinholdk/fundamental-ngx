@@ -1,0 +1,35 @@
+.fdp-thumbnail-container {
+  display: inline-flex;
+}
+
+.fdp-media-container {
+  width: 320px;
+  height: 320px;
+  padding-top: 3rem;
+  margin-left: 4rem;
+
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: 4rem;
+  }
+}
+
+.fdp-thumbnail-container--horizontal {
+  display: block;
+}
+
+.fdp-media-container--horizontal {
+  margin-bottom: 4rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+video {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
